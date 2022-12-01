@@ -1,0 +1,1 @@
+docker run -it --rm -p 9042:9042 cassandra

@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: audioid-pv
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: $TARGET
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+    name: mp3pvc
+spec:
+    accessModes:
+      - ReadWriteMany
+    storageClassName: manual
+    resources:
+        requests:
+            storage: 1Gi

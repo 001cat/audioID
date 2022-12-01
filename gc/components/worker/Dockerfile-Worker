@@ -1,0 +1,9 @@
+FROM python:3.8-buster
+RUN  apt-get update && apt-get install -y ffmpeg && mkdir /srv/db/
+RUN  pip3 install numpy pika termcolor pydub matplotlib scipy cassandra-driver
+RUN  pip3 install tqdm librosa
+WORKDIR /srv
+COPY worker.py /srv/
+COPY audioID /srv/audioID
+ENV PYTHONPATH=$PYTHONPATH:/srv/
+CMD [ "python3", "worker.py"]

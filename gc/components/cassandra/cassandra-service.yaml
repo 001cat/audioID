@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "cassandra"
+spec:
+  selector:
+    app: "cassandra"
+  ports:
+    - port: 9042
