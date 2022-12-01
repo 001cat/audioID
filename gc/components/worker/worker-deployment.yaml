@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: worker-server
-        # image: 001cat/audioid-worker:latest
-        imagePullPolicy: Never
-        image: audioid-worker
+        image: 001cat/audioid-worker:latest
+        # imagePullPolicy: Never
+        # image: audioid-worker
         resources:
           requests:
             cpu: 500m

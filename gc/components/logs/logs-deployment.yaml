@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: logs
-        # image: 001cat/audioid-logs:latest
-        imagePullPolicy: Never
-        image: audioid-logs
+        image: 001cat/audioid-logs:latest
+        # imagePullPolicy: Never
+        # image: audioid-logs
         resources:
           requests:
             cpu: 100m

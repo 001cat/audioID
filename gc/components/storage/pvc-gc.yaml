@@ -4,13 +4,15 @@ metadata:
   name: audioid-pv
 spec:
   capacity:
-    storage: 200Gi
+    storage: 5Gi
   accessModes:
   - ReadWriteMany
-  nfs:
-    path: /audiofs
-    server: FILESTORE_IP
-    # server: 172.27.247.122
+  # nfs:
+  #   path: /audiofs
+  #   server: FILESTORE_IP
+  #   # server: 172.27.247.122
+  hostPath:
+    path: $TARGET
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
