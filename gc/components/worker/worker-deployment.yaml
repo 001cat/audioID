@@ -19,8 +19,8 @@ spec:
         # image: audioid-worker
         resources:
           requests:
-            cpu: 500m
-            memory: 500Mi
+            # cpu: 800m
+            # memory: 1000Mi
         env:
         - name: RABBITMQ_HOST
           value: rabbitmq
