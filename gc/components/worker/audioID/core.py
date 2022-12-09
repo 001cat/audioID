@@ -208,7 +208,7 @@ def recognize_file(filepath,L=None): # randomly choose L sec segment
             print(colored(msg, 'green') % total_matches_found)
 
             song = align_matches(matches)
-            song['CONFIDENCE'] //= L*5
+            song['CONFIDENCE'] //= L
 
             if config['db.type'] == 'cassandra':
                 db.saveRecog(os.path.basename(filepath),song['SONG_NAME'],song['CONFIDENCE'])
