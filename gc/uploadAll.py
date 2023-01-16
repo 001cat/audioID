@@ -71,15 +71,15 @@ class ShazamInit():
 if __name__ == '__main__':
     # shazam = ShazamInit('http://localhost')
     # shazam = ShazamInit('http://35.193.50.230')
-    shazam = ShazamInit('http://35.223.132.196')
+    shazam = ShazamInit('https://audioid.001cat.us')
 
     # shazam.requestAddNewSong('../../mp3Raw/Adele - Skyfall (Full Length).mp3')
 
-    # for f in glob.glob('../../mp3Raw/*.mp3'):
-    #     print(f)
-    #     shazam.requestAddNewSong(f,debug=False)
+    for f in glob.glob('../../mp3Raw/*.mp3'):
+        print(f)
+        shazam.requestAddNewSong(f,debug=False)
 
-    print(shazam.checkSongs())
+    # print(shazam.checkSongs())
     # print(shazam.checkRecogs())
 
     # shazam.requestRecogFile('../../mp3Raw/Anna F - Too Far.mp3',debug=True)
