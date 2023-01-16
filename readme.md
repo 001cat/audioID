@@ -12,3 +12,14 @@ Audio identification service deployed with Kubernetes. This is a service for use
   - deploy.py: deploy the whole service
 - gc: source code to deploy on Google Cloud
 
+### Architecture
+| directory | Description|
+|---|---|
+|cassandra| Scripts to deploy cassandra database|
+| logs | Scripts to deploy logger pod|
+| rest | flask REST server, client and test script|
+| worker | audioID package and necessary files to deploy worker pod
+| storage | yaml for deploying persistent volumn |
+| rabbitmq | Message queue server to manage communication between other components|
+
+![AudioIDArch](AudioIDArch.png)
