@@ -12,7 +12,6 @@ This is an service to identify you uploaded music recordings and give the matche
 | storage | yaml for deploying persistent volumn |
 | rabbitmq | Message queue server to manage communication between other components
 
-![AudioIDArch.png](/Users/ayu/Downloads/figs-final/result_1.jpg)
 
 ## Deploy
 You can run deploy-all.sh to deploy it locally, and run delete-all.sh to delete this service.
