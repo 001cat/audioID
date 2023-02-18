@@ -23,4 +23,9 @@ spec:
           requests:
         ports:
         - containerPort: 9042
+        env:
+          - name: HEAP_NEWSIZE
+            value: 128M
+          - name: MAX_HEAP_SIZE
+            value: 256M
 ---

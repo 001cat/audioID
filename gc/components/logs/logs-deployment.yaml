@@ -18,9 +18,9 @@ spec:
         # imagePullPolicy: Never
         # image: audioid-logs
         resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
+          # requests:
+          #   cpu: 100m
+          #   memory: 100Mi
         env:
         - name: RABBITMQ_HOST
           value: rabbitmq
