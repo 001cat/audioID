@@ -5,11 +5,6 @@
 
 sed "s#\$TARGET#\'/home/tsukimayaayu/tmpStorage\'#g" components/storage/pvc.yaml | kubectl apply -f -
 
-kubectl apply -f components/rest/rest-deployment.yaml
-kubectl apply -f components/rest/rest-service.yaml
-# kubectl expose deployment rest-server --name=rest-service \
-#         --type=LoadBalancer --port 80 --target-port 5000
-
 kubectl apply -f components/rabbitmq/rabbitmq-deployment.yaml
 kubectl apply -f components/rabbitmq/rabbitmq-service.yaml
 
@@ -17,6 +12,11 @@ kubectl apply -f components/cassandra/cassandra-deployment.yaml
 kubectl apply -f components/cassandra/cassandra-service.yaml
 # kubectl apply -f https://k8s.io/examples/application/cassandra/cassandra-service.yaml
 # kubectl apply -f https://k8s.io/examples/application/cassandra/cassandra-statefulset.yaml
+
+kubectl apply -f components/rest/rest-deployment.yaml
+kubectl apply -f components/rest/rest-service.yaml
+# kubectl expose deployment rest-server --name=rest-service \
+#         --type=LoadBalancer --port 80 --target-port 5000
 
 kubectl apply -f components/logs/logs-deployment.yaml
 

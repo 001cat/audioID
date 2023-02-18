@@ -70,8 +70,8 @@ class ShazamInit():
 
 if __name__ == '__main__':
     # shazam = ShazamInit('http://localhost')
-    # shazam = ShazamInit('http://35.193.50.230')
-    shazam = ShazamInit('https://audioid.001cat.us')
+    shazam = ShazamInit('http://34.107.195.102')
+    # shazam = ShazamInit('https://audioid.001cat.us')
 
     # shazam.requestAddNewSong('../../mp3Raw/Adele - Skyfall (Full Length).mp3')
 
